@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { cn } from "@/lib/utils"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -24,16 +25,24 @@ export function ModeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent
+        align="center" // Keep dropdown centered below the button
+        side="bottom" // Show below the button
+        sideOffset={8} // Add a little spacing between the button and menu
+        className={cn(
+          "w-48 origin-top-center rounded-md bg-white p-2 shadow-md dark:bg-gray-800",
+          "animate-slide-down absolute z-50" // Updated z-index for better stacking
+        )}
+      >
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        {/* <DropdownMenuItem onClick={() => setTheme("system")}>
           System
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   )

@@ -32,10 +32,44 @@ const Navbar = () => {
             </div>
 
             {/* Hamburger Menu */}
-            <div className="block lg:hidden">
+            <div className="block lg:hidden relative">
               <button onClick={toggleMenu} className="text-blue-500 dark:text-blue-300 focus:outline-none">
-                <FontAwesomeIcon icon={faBars} className="h-6 w-6" />
+                <FontAwesomeIcon icon={faBars} className="h-6 w-6 relative" />
               </button>
+              {/* Hamburger Menu Items */}
+              <div className={`bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 absolute right-0 transform transition-transform duration-300 ${isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'} origin-top z-40`}>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="#" legacyBehavior>
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
+                        Home
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" legacyBehavior>
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
+                        Doctors
+                      </a>
+                    </Link>
+                  </li>
+                  <Dropdown/>
+                  <li>
+                    <Link href="/contact" legacyBehavior>
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
+                        Contact Us
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/appointment" legacyBehavior>
+                      <a className="btn bg-blue-500 dark:bg-blue-300 dark:text-gray-700 py-2 px-4 rounded hover:bg-blue-600 dark:hover:bg-blue-400 block text-center">
+                        Appointment
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Main Menu */}
@@ -89,41 +123,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      {/* Hamburger Menu Items */}
-      <div className={`lg:hidden bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 absolute bottom-0 right-0 w-64 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}>
-        <ul className="space-y-4">
-          <li>
-            <Link href="#" legacyBehavior>
-              <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
-                Home
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#" legacyBehavior>
-              <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
-                Doctors
-              </a>
-            </Link>
-          </li>
-          <Dropdown/>
-          <li>
-            <Link href="/contact" legacyBehavior>
-              <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
-                Contact Us
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/appointment" legacyBehavior>
-              <a className="btn bg-blue-500 dark:bg-blue-300 dark:text-gray-700 py-2 px-4 rounded hover:bg-blue-600 dark:hover:bg-blue-400 block text-center">
-                Appointment
-              </a>
-            </Link>
-          </li>
-        </ul>
-      </div>
 
       <style jsx>{`
         @media (min-width: 764px) {
