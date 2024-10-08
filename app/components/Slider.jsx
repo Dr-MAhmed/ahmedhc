@@ -81,7 +81,7 @@ const Slider = () => {
           }}
         >
           {/* Light background for small devices */}
-          <div className="absolute inset-x-0 bottom-0 h-full bg-white/70 md:hidden"></div>
+          <div className="absolute inset-x-0 bottom-0 h-full bg-white/70 dark:bg-blue-300/70 transform text-blue-500 md:hidden"></div>
 
           <div className="container mx-auto h-full flex items-center justify-center md:justify-start relative px-4 sm:px-6">
             <div className="text-gray-800 dark:text-black max-w-lg text-center md:text-left z-10">
@@ -97,7 +97,7 @@ const Slider = () => {
                   word.includes('Priority') ||
                   word.includes('Homeopathy') ||
                   word.includes('Cure') ? (
-                    <span key={idx} className="text-blue-400">
+                    <span key={idx} className="text-blue-600">
                       {word}{' '}
                     </span>
                   ) : (
