@@ -117,12 +117,18 @@ const Slider = () => {
                   <a
                     key={btnIndex}
                     href={button.link}
-                    className={`btn py-2 px-4 rounded hover:bg-blue-600 dark:hover:bg-blue-400 block text-center transition-transform duration-700 ${
+                    className={`btn py-2 px-4 rounded hover:bg-blue-600 block text-center transition-transform duration-700 ${
                       index === currentSlide ? 'transform translate-y-0' : 'transform translate-y-full'
                     } ${
                       button.primary
-                        ? 'bg-blue-500 text-gray-200 dark:bg-blue-500 dark:text-black'
-                        : 'bg-gray-800 text-gray-200 dark:bg-blue-500 dark:text-black'
+                        ? 'bg-blue-500 text-gray-200' // Light mode primary button styles
+                        : 'bg-gray-800 text-blue-200'  // Dark mode non-primary button styles with blue-200 text
+                    } ${
+                      isDarkMode // Check if dark mode is active
+                        ? button.primary
+                          ? 'bg-blue-500 text-gray-200' // Dark mode primary button styles
+                          : 'bg-gray-800 text-blue-200'  // Dark mode non-primary button styles with blue-200 text
+                        : ''
                     }`}
                   >
                     {button.label}
