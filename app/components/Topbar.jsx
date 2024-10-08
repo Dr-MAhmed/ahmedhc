@@ -15,13 +15,13 @@ const Topbar = () => {
                 <a href="/about">About</a>
               </li>
               <li className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300">
-                <a href="#">Doctors</a>
+                <a href="/doctors">Doctors</a>
               </li>
               <li className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300">
-                <a href="#">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
               <li className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300">
-                <a href="#">FAQ</a>
+                <a href="/faq">FAQ</a>
               </li>
               <li className="text-blue-500 text-sm flex items-center space-x-2 md:hidden">
                 <ModeToggle />

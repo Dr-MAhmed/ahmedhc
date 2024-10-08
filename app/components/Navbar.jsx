@@ -47,7 +47,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" legacyBehavior>
+                    <Link href="/doctors" legacyBehavior>
                       <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
                         Doctors
                       </a>
@@ -88,7 +88,7 @@ const Navbar = () => {
 
                   {/* Doctors Menu */}
                   <li className="group relative">
-                    <Link href="#" legacyBehavior>
+                    <Link href="/doctors" legacyBehavior>
                       <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block">
                         Doctors <i className="icofont-rounded-down"></i>
                       </a>

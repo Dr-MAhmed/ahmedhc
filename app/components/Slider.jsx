@@ -19,8 +19,8 @@ const Slider = () => {
       title: 'We Provide Medical Services That You Can Trust!',
       description: 'We offer reliable medical services focused on trust, quality care, and effective homeopathic treatments.',
       buttons: [
-        { label: 'Get Appointment', link: '#' },
-        { label: 'About Us', link: '#', primary: true },
+        { label: 'Get Appointment', link: '/appointment' },
+        { label: 'About Us', link: '/about', primary: true },
       ],
     },
     {
@@ -31,8 +31,8 @@ const Slider = () => {
       title: 'Your Health, Our Priority!',
       description: 'Your health is our top priority, offering personalized care and natural healing with homeopathy.',
       buttons: [
-        { label: 'Get Appointment', link: '#', primary: true },
-        { label: 'Contact Us', link: '#' },
+        { label: 'Get Appointment', link: '/appointment', primary: true },
+        { label: 'Contact Us', link: '/contact' },
       ],
     },
     {
@@ -43,7 +43,7 @@ const Slider = () => {
       title: 'We Use Homeopathy To Cure Illness!',
       description: 'Effective natural remedies using homeopathy to heal various illnesses.',
       buttons: [
-        { label: 'Contact Now', link: '#', primary: true },
+        { label: 'Contact Now', link: '/contact', primary: true },
         { label: 'Learn More', link: '#' },
       ],
     },
