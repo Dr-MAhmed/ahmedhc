@@ -44,7 +44,7 @@ const Slider = () => {
       description: 'Effective natural remedies using homeopathy to heal various illnesses.',
       buttons: [
         { label: 'Contact Now', link: '/contact', primary: true },
-        { label: 'Learn More', link: '#' },
+        { label: 'Learn More', link: '/' },
       ],
     },
   ];

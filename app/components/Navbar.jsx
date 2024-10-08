@@ -40,7 +40,7 @@ const Navbar = () => {
               <div className={`bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 absolute right-0 transform transition-transform duration-300 ${isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'} origin-top z-40`}>
                 <ul className="space-y-4">
                   <li>
-                    <Link href="#" legacyBehavior>
+                    <Link href="/" legacyBehavior>
                       <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
                         Home
                       </a>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 <ul className="nav menu flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
                   {/* Home Menu */}
                   <li className="group relative">
-                    <Link href="#" legacyBehavior>
+                    <Link href="/" legacyBehavior>
                       <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block">
                         Home
                       </a>
