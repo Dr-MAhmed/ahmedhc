@@ -1,30 +1,56 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import Dropdown from "./Dropdown"
+import Dropdown from "./Dropdown";
 import { ModeToggle } from './theme-btn';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+
   return (
     <>
-      <nav className='bg-white h-20 w-full border-b border-gray-200 dark:bg-gray-900 dark:text-white relative z-50'>
+      <nav
+        className={`bg-white h-20 w-full border-b border-gray-200 dark:bg-gray-900 dark:text-white ${
+          isSticky ? 'fixed top-0 left-0 shadow-lg scale-105 opacity-95' : 'relative scale-100 opacity-100'
+        } z-50 transform transition-all duration-700 ease-in-out`}
+      >
         <div className='container mx-auto px-4 h-full'>
           <div className='flex justify-between items-center h-full'>
             <div className='flex items-center'>
               <Image 
-                src="/logo.png" // Path relative to the `public` folder
+                src="/logo.png"
                 alt="A description of the image"
-                width={50}  // Set the desired width
-                height={30} // Set the desired height
+                width={50}
+                height={30}
               />
               &nbsp;
               <span className='text-blue-500 text-lg font-semibold dark:text-blue-300'>Ahmed</span>&nbsp;
@@ -53,7 +79,7 @@ const Navbar = () => {
                       </a>
                     </Link>
                   </li>
-                  <Dropdown/>
+                  <Dropdown />
                   <li>
                     <Link href="/contact" legacyBehavior>
                       <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 block py-2 px-4 rounded transition-colors duration-300">
@@ -76,61 +102,48 @@ const Navbar = () => {
             <div className={`hidden lg:flex`}>
               <nav className="navigation">
                 <ul className="nav menu flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
-                  {/* Home Menu */}
                   <li className="group relative">
                     <Link href="/" legacyBehavior>
-                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block">
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block transition-transform duration-300 transform group-hover:scale-110">
                         Home
                       </a>
                     </Link>
                     <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 dark:bg-blue-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                   </li>
 
-                  {/* Doctors Menu */}
                   <li className="group relative">
                     <Link href="/doctors" legacyBehavior>
-                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block">
-                        Doctors <i className="icofont-rounded-down"></i>
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block transition-transform duration-300 transform group-hover:scale-110">
+                        Doctors
                       </a>
                     </Link>
                     <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 dark:bg-blue-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                   </li>
 
-                  <Dropdown/>
+                  <Dropdown />
 
-                  {/* Contact Menu */}
                   <li className="group relative">
                     <Link href="/contact" legacyBehavior>
-                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block">
+                      <a className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 py-2 px-4 inline-block transition-transform duration-300 transform group-hover:scale-110">
                         Contact Us
                       </a>
                     </Link>
                     <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 dark:bg-blue-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                   </li>
 
-                  {/* Appointment Button */}
                   <li className="flex items-center">
                     <Link href="/appointment" legacyBehavior>
-                      <a className="btn bg-blue-500 dark:bg-blue-300 text-white dark:text-gray-900 py-2 px-4 rounded hover:bg-blue-600 dark:hover:bg-blue-400">
+                      <a className="btn bg-blue-500 dark:bg-blue-300 text-white dark:text-gray-900 py-2 px-4 rounded hover:bg-blue-600 dark:hover:bg-blue-400 transition-transform duration-300 transform hover:scale-105">
                         Appointment
                       </a>
                     </Link>
                   </li>
                 </ul>
-                {/* <ModeToggle/> */}
               </nav>
             </div>
           </div>
         </div>
       </nav>
-
-      <style jsx>{`
-        @media (min-width: 764px) {
-          .block {
-            display: none;
-          }
-        }
-      `}</style>
     </>
   );
 };
