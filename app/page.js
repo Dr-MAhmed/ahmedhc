@@ -1,5 +1,6 @@
 import Slider from './components/Slider';
 import HomeoSection2 from './components/HomeoSection2';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
