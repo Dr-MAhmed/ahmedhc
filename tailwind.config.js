@@ -52,6 +52,7 @@ module.exports = {
 		  gold: {
 			500: '#7DD3FC', // Gold color definition added here
 		  },
+		  customGray: '#111827'
 		},
 		borderRadius: {
 		  lg: 'var(--radius)',
