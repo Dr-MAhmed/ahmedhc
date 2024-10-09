@@ -141,16 +141,24 @@ const Slider = () => {
       ))}
 
       {/* Navigation */}
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 flex items-center hidden md:flex">
-        <button onClick={prevSlide} className="bg-blue-500 p-2 text-gray-200 rounded-full">
-          &#60;
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex items-center hidden md:flex">
-        <button onClick={nextSlide} className="bg-blue-500 p-2 text-gray-200 rounded-full">
-          &#62;
-        </button>
-      </div>
+      {/* Navigation */}
+<div className="absolute top-1/2 left-6 transform -translate-y-1/2 flex items-center hidden md:flex">
+  <button
+    onClick={prevSlide}
+    className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+  >
+    &#60;
+  </button>
+</div>
+<div className="absolute top-1/2 right-6 transform -translate-y-1/2 flex items-center hidden md:flex">
+  <button
+    onClick={nextSlide}
+    className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+  >
+    &#62;
+  </button>
+</div>
+
 
       {/* Pagination */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
