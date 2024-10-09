@@ -9,7 +9,7 @@ const Topbar = () => {
       <div className="container mx-auto px-2 h-full">
         <div className="flex justify-between items-center h-full flex-wrap">
           {/* Left Section: Navigation Links */}
-          <div className="flex items-center space-x-2 flex-wrap w-full md:w-1/2">
+          <div className="flex items-center ml-6 space-x-2 flex-wrap w-full md:w-1/2">
             <ul className="top-link flex space-x-2 flex-wrap w-full md:w-auto justify-center md:justify-start">
               <li className="text-black dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs md:text-sm">
                 <a href="/about">About</a>
