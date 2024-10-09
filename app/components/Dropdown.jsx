@@ -45,7 +45,7 @@ export default function DropdownMenu() {
         >
           <div className="py-1" role="none">
             <a
-              href="#"
+              href="/appointment"
               className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-400"
               role="menuitem"
               tabIndex="-1"
@@ -54,7 +54,7 @@ export default function DropdownMenu() {
               Appointment
             </a>
             <a
-              href="#"
+              href="/timetable"
               className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-400"
               role="menuitem"
               tabIndex="-1"
@@ -65,7 +65,7 @@ export default function DropdownMenu() {
           </div>
           <div className="py-1" role="none">
             <a
-              href="#"
+              href="/pricing"
               className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-400"
               role="menuitem"
               tabIndex="-1"
@@ -74,7 +74,7 @@ export default function DropdownMenu() {
               Our Pricing
             </a>
             <a
-              href="#"
+              href="/faq"
               className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-400"
               role="menuitem"
               tabIndex="-1"
