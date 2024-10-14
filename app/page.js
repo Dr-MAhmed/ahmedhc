@@ -1,5 +1,7 @@
-import Slider from './components/Slider';
-import HomeoSection2 from './components/HomeoSection2';
+// import Slider from './components/Slider';
+// import HomeoSection2 from './components/HomeoSection2';
+import Slider from "@/components/ui/Slider";
+import HomeoSection2 from "@/components/ui/HomeoSection2";
 
 export default function Home() {
   return (
