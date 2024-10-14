@@ -35,14 +35,14 @@ export function ModeToggle() {
         )}
       >
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+         <span className="hover:text-blue-500 cursor-pointer">Light</span> 
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        <span className="hover:text-blue-500 cursor-pointer">Dark</span>
         </DropdownMenuItem>
-        {/* <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem> */}
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <span className="hover:text-blue-500 cursor-pointer">System</span>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
