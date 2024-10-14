@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 const Slider = () => {
   const { theme } = useTheme();
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     setIsDarkMode(theme === 'dark');
@@ -49,8 +50,6 @@ const Slider = () => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const prevSlide = () => {
     setCurrentSlide((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
   };
@@ -64,7 +63,7 @@ const Slider = () => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, []);
 
   return (
     <section className="slider relative w-full h-[60vh] px-4 md:px-0">
@@ -90,7 +89,7 @@ const Slider = () => {
                   index === currentSlide ? 'transform translate-y-0' : 'transform -translate-y-full'
                 }`}
               >
-                {slide.title.split(' ').map((word, idx) =>
+                {slide.title.split(' ').map((word, idx) => (
                   word.includes('Medical') ||
                   word.includes('Trust!') ||
                   word.includes('Health') ||
@@ -101,9 +100,9 @@ const Slider = () => {
                       {word}{' '}
                     </span>
                   ) : (
-                    `${word} `
+                    <span key={idx}>{word} </span>
                   )
-                )}
+                ))}
               </h1>
               <p
                 className={`mb-6 md:mb-8 transition-transform duration-700 ${
@@ -121,14 +120,8 @@ const Slider = () => {
                       index === currentSlide ? 'transform translate-y-0' : 'transform translate-y-full'
                     } ${
                       button.primary
-                        ? 'bg-blue-500 text-gray-200' // Light mode primary button styles
-                        : 'bg-gray-800 text-blue-200'  // Dark mode non-primary button styles with blue-200 text
-                    } ${
-                      isDarkMode // Check if dark mode is active
-                        ? button.primary
-                          ? 'bg-blue-500 text-gray-200' // Dark mode primary button styles
-                          : 'bg-gray-800 text-blue-200'  // Dark mode non-primary button styles with blue-200 text
-                        : ''
+                        ? 'bg-blue-500 text-gray-200'
+                        : 'bg-gray-800 text-blue-200'
                     }`}
                   >
                     {button.label}
@@ -141,24 +134,22 @@ const Slider = () => {
       ))}
 
       {/* Navigation */}
-      {/* Navigation */}
-<div className="absolute top-1/2 left-6 transform -translate-y-1/2 flex items-center hidden md:flex">
-  <button
-    onClick={prevSlide}
-    className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-  >
-    &#60;
-  </button>
-</div>
-<div className="absolute top-1/2 right-6 transform -translate-y-1/2 flex items-center hidden md:flex">
-  <button
-    onClick={nextSlide}
-    className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-  >
-    &#62;
-  </button>
-</div>
-
+      <div className="absolute top-1/2 left-6 transform -translate-y-1/2  items-center hidden md:flex">
+        <button
+          onClick={prevSlide}
+          className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+        >
+          &#60;
+        </button>
+      </div>
+      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 items-center hidden md:flex">
+        <button
+          onClick={nextSlide}
+          className="bg-blue-500 w-12 h-12 text-gray-200 rounded-full mx-4 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+        >
+          &#62;
+        </button>
+      </div>
 
       {/* Pagination */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
