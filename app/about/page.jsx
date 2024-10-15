@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutUs = () => {
@@ -12,7 +13,11 @@ const AboutUs = () => {
         </h2>
         {/* Adding the image below the text */}
         <div className="flex justify-center mb-2 sm:mb-4">
-          <img src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13" />
+          <Image src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13"
+          width={33}
+          height={33}
+          />
+        
         </div>
         <p className="text-base md:text-lg mb-4 leading-relaxed">
           Welcome to <span className="font-semibold text-blue-600 dark:text-blue-400">Ahmed Homeopathy Clinic</span>, where we combine experience with dedication to provide the best homeopathic care for our patients. Our clinic is a family-run practice that values trust, quality, and compassion.

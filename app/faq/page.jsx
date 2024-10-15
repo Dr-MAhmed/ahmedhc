@@ -238,7 +238,10 @@ const FAQ = () => {
         <h2 className="text-sm sm:text-lg text-blue-700 dark:text-blue-400 mb-1">Let's answer some questions</h2>
         <h3 className="text-lg sm:text-2xl font-bold text-blue-600 dark:text-gray-300">FAQs</h3>
         <div className="flex justify-center my-3">
-          <img src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13" />
+        <Image src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13"
+          width={33}
+          height={33}
+          />
         </div>
         <div className="grid grid-cols-2 gap-2 mb-4 max-w-xs mx-auto sm:flex sm:justify-center sm:gap-2">
           {['Homeopathy', 'Allopathy', 'Naturopathy', 'Acupuncture'].map((tab, index) => (
