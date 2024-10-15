@@ -1,6 +1,7 @@
 // components/FAQ.js
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State for active tab index
