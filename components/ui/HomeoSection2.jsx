@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const HomeoSection2 = () => {
   return (
@@ -10,7 +11,10 @@ const HomeoSection2 = () => {
 
         {/* Adding the image below the text */}
         <div className="flex justify-center mb-4 sm:mb-8">
-          <img src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13" />
+          <Image src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13"
+            width={33}
+            height={33}
+          />
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-6 sm:mt-8">
@@ -22,10 +26,12 @@ const HomeoSection2 = () => {
               <div className="bg-blue-700 dark:bg-blue-900 w-full py-4 sm:py-6">
                 <picture>
                   <source srcSet={`/${type}.png`} type="image/webp" />
-                  <img
+                  <Image
                     src={`/${type}.png`}
                     alt={type}
                     className="w-10 h-10 sm:w-12 sm:h-12 mx-auto filter invert"
+                    width={33}
+                    height={33}
                   />
                 </picture>
               </div>

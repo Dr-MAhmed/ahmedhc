@@ -16,7 +16,7 @@ const FAQ = () => {
       },
       {
         question: "How does homeopathy work?",
-        answer: "Homeopathy works on the principle of 'like cures like', where a substance causing symptoms in a healthy person is used to treat similar symptoms in a sick person.",
+        answer: "Homeopathy works on the principle of like cures like, where a substance causing symptoms in a healthy person is used to treat similar symptoms in a sick person.",
       },
       {
         question: "Is homeopathy safe?",
@@ -154,7 +154,7 @@ const FAQ = () => {
       },
       {
         question: "Personalized treatments?",
-        answer: "Yes, naturopathic treatments are tailored to the individual's health needs, lifestyle, and specific conditions.",
+        answer: "Yes, naturopathic treatments are tailored to the individuals health needs, lifestyle, and specific conditions.",
       },
       {
         question: `Detoxs role in it?`,
@@ -236,7 +236,7 @@ const FAQ = () => {
   return (
     <div className="py-6 px-3 bg-gray-100 dark:bg-gray-800 min-h-[753px] w-full max-w-3xl mx-auto">
       <div className="text-center mb-4">
-        <h2 className="text-sm sm:text-lg text-blue-700 dark:text-blue-400 mb-1">Let's answer some questions</h2>
+        <h2 className="text-sm sm:text-lg text-blue-700 dark:text-blue-400 mb-1">Lets answer some questions</h2>
         <h3 className="text-lg sm:text-2xl font-bold text-blue-600 dark:text-gray-300">FAQs</h3>
         <div className="flex justify-center my-3">
         <Image src="/beating.png" alt="Beating Heart" className="w-13 h-13 sm:w-13 sm:h-13"
