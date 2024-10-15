@@ -12,7 +12,7 @@ const FAQ = () => {
     [
       {
         question: "What is homeopathy?",
-        answer: `Homeopathy is a system of alternative medicine that uses highly diluted substances to trigger the body’s natural healing processes.`,
+        answer: `Homeopathy is a system of alternative medicine that uses highly diluted substances to trigger the bodys natural healing processes.`,
       },
       {
         question: "How does homeopathy work?",
@@ -28,7 +28,7 @@ const FAQ = () => {
       },
       {
         question: "Can it be used with regular medicine?",
-        answer: `Yes, homeopathy can be used alongside conventional medicine, but it’s best to consult your healthcare provider first.`,
+        answer: `Yes, homeopathy can be used alongside conventional medicine, but its best to consult your healthcare provider first.`,
       },
       {
         question: "What conditions can homeopathy treat?",
@@ -134,14 +134,14 @@ const FAQ = () => {
       },
       {
         question: "How effective is naturopathy?",
-        answer: `The effectiveness of naturopathy can vary depending on the condition being treated and the individual’s response.`,
+        answer: `The effectiveness of naturopathy can vary depending on the condition being treated and the individuals response.`,
       },
       {
         question: "Can it work with other meds?",
-        answer: `Yes, naturopathy can complement conventional medicine, but it’s important to inform all healthcare providers involved.`,
+        answer: `Yes, naturopathy can complement conventional medicine, but its important to inform all healthcare providers involved.`,
       },
       {
-        question: `Naturopathy’s diet view?`,
+        question: `Naturopathys diet view?`,
         answer: "Naturopathy emphasizes a balanced diet rich in whole foods, aiming to improve health through nutrition.",
       },
       {
@@ -157,7 +157,7 @@ const FAQ = () => {
         answer: "Yes, naturopathic treatments are tailored to the individual's health needs, lifestyle, and specific conditions.",
       },
       {
-        question: `Detox’s role in it?`,
+        question: `Detoxs role in it?`,
         answer: "Detoxification is often used to cleanse the body of toxins and improve overall health in naturopathic practice.",
       },
       {
@@ -215,7 +215,7 @@ const FAQ = () => {
       },
       {
         question: "How to prep for sessions?",
-        answer: `It’s recommended to wear comfortable clothing, have a light meal, and avoid caffeine before an acupuncture session.`,
+        answer: `Its recommended to wear comfortable clothing, have a light meal, and avoid caffeine before an acupuncture session.`,
       },
       {
         question: "Any risks involved?",
