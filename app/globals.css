@@ -11,6 +11,13 @@ body {
   background-color: #fff;
 }
 
+.loader-circle {
+  position: relative;
+}
+
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
