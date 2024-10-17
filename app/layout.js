@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         {/* Other meta tags can go here if needed */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LoaderWrapper>
             <Topbar />
             <Navbar />

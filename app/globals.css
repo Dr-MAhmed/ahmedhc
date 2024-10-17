@@ -122,3 +122,25 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* glowingLine Effect */
+.glowing-line {
+  width: 30%;
+  margin: 2rem auto; /* Centers the line horizontally */
+  border: none;
+  height: 3px; /* Thinner line */
+  background: linear-gradient(90deg, #1D4ED8, #1E40AF, #1D4ED8);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1E40AF, 0 0 20px #1D4ED8, 0 0 30px #1E40AF;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 5px #1E40AF, 0 0 10px #1D4ED8, 0 0 15px #1E40AF;
+  }
+  to {
+    box-shadow: 0 0 20px #1D4ED8, 0 0 30px #1E40AF, 0 0 40px #1D4ED8;
+  }
+}
