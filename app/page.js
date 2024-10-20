@@ -1,6 +1,7 @@
 import Slider from "@/components/ui/Slider";
 import HomeoSection2 from "@/components/ui/HomeoSection2";
 import Diseases from "@/components/ui/Diseases";
+import Misconception from "@/components/ui/Misconception";
 
 export default function Home() {
   return (
@@ -14,6 +15,10 @@ export default function Home() {
         <hr className="glowing-line" />
         <div className="pt-16"> {/* You can adjust the value (e.g., mt-8, mt-12) as needed */}
           <Diseases />
+        </div>
+        <hr className="glowing-line" />
+        <div className="pt-16"> {/* You can adjust the value (e.g., mt-8, mt-12) as needed */}
+          <Misconception />
         </div>
       </div>
     </>
