@@ -221,7 +221,7 @@ const ContactUs = () => {
                       onCheckedChange={(checked) => setFormData({ ...formData, subscribe: checked })}
                       name="subscribe"
                     />
-                    &nbsp; <span className='sm:text-base md:text-lg'>Do you want to subscribe to our Newsletter?</span>
+                    &nbsp; <span className='sm:text-base md:text-[14px]'>Do you want to subscribe to our Newsletter?</span>
                   </label>
 
                 </div>
