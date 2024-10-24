@@ -20,12 +20,13 @@ const ContactUs = () => {
   });
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
     });
-  };
+  };  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -205,11 +206,12 @@ const ContactUs = () => {
                   <label className="flex items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-5">
                     <Checkbox
                       checked={formData.subscribe}
-                      onChange={handleChange}
+                      onCheckedChange={(checked) => setFormData({ ...formData, subscribe: checked })}
                       name="subscribe"
                     /> &nbsp;
-                    Do you want to subscribe to our Newsletter?
+                    &nbsp; <span className='sm:text-base md:text-lg'>Do you want to subscribe to our Newsletter?</span>
                   </label>
+
                 </div>
               </form>
               <ToastContainer
