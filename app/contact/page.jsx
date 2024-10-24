@@ -6,7 +6,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import LottieIcon from '@/components/ui/LottieIcon';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import SendButtonLoader from '@/components/ui/SendButtonLoader';
 import { DNA } from 'react-loader-spinner';
 
 const ContactUs = () => {
@@ -210,7 +209,7 @@ const ContactUs = () => {
                         height="24"
                         width="24"
                         ariaLabel="dna-loading"
-                        wrapperStyle={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                        wrapperStyle={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'blue' }}
                         wrapperClass="dna-wrapper"
                       />
                     ) : (

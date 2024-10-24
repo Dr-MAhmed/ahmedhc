@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.png" sizes="any" />
+        <link rel="icon" href="/logo.png" sizes="any"/>
         {/* Other meta tags can go here if needed */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
