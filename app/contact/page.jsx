@@ -202,7 +202,8 @@ const ContactUs = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`bg-blue-600 text-white py-3 px-8 sm:px-12 rounded-sm hover:bg-blue-500 w-full md:w-[300px] lg:w-[400px] text-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                    className={`py-3 px-8 sm:px-12 rounded-sm w-full md:w-[300px] lg:w-[400px] text-center transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''} ${isLoading ? 'bg-blue-600' : 'bg-blue-900 dark:bg-blue-500 hover:bg-blue-500 dark:hover:bg-blue-800'}`}
+                  >
                     {isLoading ? (
                       <DNA
                         visible={true}
@@ -212,8 +213,11 @@ const ContactUs = () => {
                         wrapperStyle={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                         wrapperClass="dna-wrapper"
                       />
-                    ) : ('Send')}
+                    ) : (
+                      'Send'
+                    )}
                   </button>
+
 
                   <label className="flex items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-5">
                     <Checkbox
