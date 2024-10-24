@@ -229,7 +229,7 @@ const ContactUs = () => {
             <div className="flex items-center space-x-6 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
               <LottieIcon animationPath="/callAnimation.json" />
               <div>
-                <h3 className="font-semibold text-lg text-blue-800 dark:text-blue-400">+(92) 303-557-7306</h3>
+                <h3 className="font-semibold sm:text-base md:text-lg text-blue-800 dark:text-blue-400">+(92) 303-557-7306</h3>
                 <p className="text-gray-600 dark:text-gray-300">ahmedhc@gmail.com</p>
               </div>
             </div>
