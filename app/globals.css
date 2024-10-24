@@ -144,3 +144,11 @@ body {
     box-shadow: 0 0 20px #1D4ED8, 0 0 30px #1E40AF, 0 0 40px #1D4ED8;
   }
 }
+
+
+
+@media (max-width: 360px) {
+  .text-xs-for-small-devices {
+    font-size: 11px;
+  }
+}

@@ -201,7 +201,7 @@ const ContactUs = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`py-3 px-8 sm:px-12 rounded-sm w-full md:w-[300px] lg:w-[400px] text-center transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''} ${isLoading ? 'bg-blue-600' : 'bg-blue-900 dark:bg-blue-500 hover:bg-blue-500 dark:hover:bg-blue-800'}`}
+                    className={`py-3 px-8 sm:px-12 rounded-sm w-full md:w-[300px] lg:w-[400px] text-center transition-colors ${isLoading ? 'opacity-50 cursor-not-allowed' : ''} ${isLoading ? 'bg-blue-600' : 'bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-800'}`}
                   >
                     {isLoading ? (
                       <DNA
@@ -224,7 +224,7 @@ const ContactUs = () => {
                       onCheckedChange={(checked) => setFormData({ ...formData, subscribe: checked })}
                       name="subscribe"
                     />
-                    &nbsp; <span className='sm:text-base md:text-[14px]'>Do you want to subscribe to our Newsletter?</span>
+                    &nbsp; <span className='sm:text-base md:text-[14px] text-xs-for-small-devices'>Do you want to subscribe to our Newsletter?</span>
                   </label>
 
                 </div>
