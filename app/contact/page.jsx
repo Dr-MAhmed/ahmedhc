@@ -6,6 +6,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import LottieIcon from '@/components/ui/LottieIcon';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SendButtonLoader from '@/components/ui/SendButtonLoader';
+import { DNA } from 'react-loader-spinner';
 
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +28,7 @@ const ContactUs = () => {
       ...formData,
       [name]: type === 'checkbox' ? checked : value,
     });
-  };  
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -200,9 +202,19 @@ const ContactUs = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`bg-blue-600 text-white py-3 px-8 sm:px-12 rounded-sm hover:bg-blue-500 w-full md:w-auto text-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}>
-                    {isLoading ? 'Sending...' : 'Send'}
+                    className={`bg-blue-600 text-white py-3 px-8 sm:px-12 rounded-sm hover:bg-blue-500 w-full md:w-[300px] lg:w-[400px] text-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                    {isLoading ? (
+                      <DNA
+                        visible={true}
+                        height="24"
+                        width="24"
+                        ariaLabel="dna-loading"
+                        wrapperStyle={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                        wrapperClass="dna-wrapper"
+                      />
+                    ) : ('Send')}
                   </button>
+
                   <label className="flex items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-5">
                     <Checkbox
                       checked={formData.subscribe}
